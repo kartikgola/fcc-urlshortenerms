@@ -19,8 +19,8 @@ router.get('/', function (req, res, next) {
       console.log(num);
 
       urlData.insertOne({
-        id: num + 101,
-        shortCode: (num + 101).toString(16),
+        id: num + 1001,
+        shortCode: (num + 1001).toString(16),
         targetUrl: originalUrl
       }, function (err, result) {
         if (err)
@@ -28,7 +28,7 @@ router.get('/', function (req, res, next) {
         console.log('Inserted!');
         res.json({
           originalUrl : originalUrl,
-          shortUrl : "http://localhost:3000/" + (num+101).toString(16)
+          shortUrl : "http://localhost:3000/" + (num+1001).toString(16)
         });
         db.close();
       }); // insertOne
