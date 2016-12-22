@@ -4,7 +4,7 @@ var mongoClient = require('mongodb').MongoClient;
 var assert = require('assert');
 var objectId = require('mongodb').ObjectID;
 
-var dbUrl = "mongodb://127.0.0.1:27017/test";
+var dbUrl = process.env.MONGOLAB_URI;
 
 router.get('/', function (req, res, next) {
 

@@ -4,7 +4,7 @@ var mongoClient = require('mongodb').MongoClient;
 var assert = require('assert');
 var objectId = require('mongodb').ObjectID;
 
-var dbUrl = "mongodb://127.0.0.1:27017/test";
+var dbUrl = process.env.MONGOLAB_URI;
 
 router.get('/', function (req, res, next) {
 
@@ -28,7 +28,7 @@ router.get('/', function (req, res, next) {
         console.log('Inserted!');
         res.json({
           originalUrl : originalUrl,
-          shortUrl : "http://localhost:3000/" + (num+1001).toString(16)
+          shortUrl : "http://http://urlshortenerms-fcc.herokuapp.com/" + (num+1001).toString(16)
         });
         db.close();
       }); // insertOne
