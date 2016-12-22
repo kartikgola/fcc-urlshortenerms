@@ -28,7 +28,7 @@ router.get('/', function (req, res, next) {
         console.log('Inserted!');
         res.json({
           originalUrl : originalUrl,
-          shortUrl : "http://http://urlshortenerms-fcc.herokuapp.com/" + (num+1001).toString(16)
+          shortUrl : "http://sh0rturl.herokuapp.com/" + (num+1001).toString(16)
         });
         db.close();
       }); // insertOne
